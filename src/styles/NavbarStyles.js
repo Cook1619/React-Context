@@ -1,5 +1,4 @@
 import { fade } from "@material-ui/core/styles/colorManipulator";
-
 const styles = (theme) => ({
   root: {
     width: "100%",
@@ -32,13 +31,31 @@ const styles = (theme) => ({
       width: "auto",
     },
   },
-  searchIcons: {
+  searchIcon: {
     width: theme.spacing.unit * 9,
     height: "100%",
     position: "absolute",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+  },
+  inputRoot: {
+    color: "inherit",
+    width: "100%",
+  },
+  inputInput: {
+    paddingTop: theme.spacing.unit,
+    paddingRight: theme.spacing.unit,
+    paddingBottom: theme.spacing.unit,
+    paddingLeft: theme.spacing.unit * 10,
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      width: 120,
+      "&:focus": {
+        width: 200,
+      },
+    },
   },
 });
 
